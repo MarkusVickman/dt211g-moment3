@@ -18,25 +18,18 @@ h1 {
 @mixin dark() {
     background-color: black;
     color: white;
+    border-color: white;
 }
 
 @mixin light() {
     background-color: white;
     color: black;
-}
-
-@mixin blackborder() {
     border-color: black;
-}
-
-@mixin whiteborder() {
-    border-color: white;
 }
 
 @media (prefers-color-scheme: light){
     body, header, nav, footer,.menu-link {
         @include light();
-        @include blackborder();
     }
 
     body {
@@ -47,7 +40,6 @@ h1 {
 @media (prefers-color-scheme: dark){
     body, header, nav, footer, .menu-link {
         @include dark();
-        @include whiteborder();
     }
 
     body{
