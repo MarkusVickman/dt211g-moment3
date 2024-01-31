@@ -1,32 +1,38 @@
 button {
-    width: 45px;
-    height: 45px;
     font-size: 1.2em;
     position: absolute;
-    background-color: white;
+    background-color: darkblue;
     border-radius: 5px;
     border-style: none;
 }
 
+button:hover {
+    background-color: rgb(0, 144, 192);
+}
+#btn-open:hover, #btn-close:hover{
+    background-color: rgb(0, 144, 192);
+}
+
 /*Menyknapp för öppnaknappen i headern*/
-.menu-btn-open {
+#btn-open {
     display: flex;
     align-items: center;
     padding: 8px 15px;
     background-color: #004080;
     right: 15px;
-    height: 42px;
-    width: 125px;
-    top: 17px;
-    position: absolute;
+    top: 27px;
     border-width: 0;
     border-radius: 5px;
     color: white;
     box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
+.meny-text{
+    position: relative;
+}
+
 /*Styling av stängmeny-knappen i utfäld meny*/
-.menu-btn-close {
+#btn-close {
     display: flex;
     align-items: center;
     padding: 8px 15px;
@@ -76,4 +82,11 @@ button {
     height: 3px;
     background-color: white;
     margin: 5px 0;
+}
+
+@media (min-width: 700px) {
+#btn-close,
+#btn-open {
+    display: none;
+}
 }

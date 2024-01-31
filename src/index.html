@@ -13,13 +13,27 @@
 <body>
     <header>
         <a href="index.html">
-            <div class="logo"><img width="200" height="78" src="img/Automation-logos_white.png"
-                    alt="logotyp med texten Automation"></div>
+            <div class="logo"><!--<img width="200" height="78" src="img/Automation-logos_white.svg"
+                    alt="logotyp med texten Automation">--></div>
         </a>
-        <button id="btn-open"></button>
+        <button id="btn-open">
+            <span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+                <span class="bars"></span>
+            </span>
+        </button>
     </header>
     <nav id="main-nav">
-        <button id="btn-close"></button>
+        <button id="btn-close">
+            <span class="menu-icon">
+                <span class="bars-cross1"></span>
+                <span class="bars-cross2"></span>
+            </span>
+            <span class="menu-text">
+                Stäng meny
+            </span>
+        </button>
         <div class="center-menu">
         <ul>
             <li><a href="index.html" class="menu-link" id="menu-underline">Startsida</a></li>

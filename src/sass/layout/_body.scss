@@ -1,3 +1,30 @@
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: white;
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
 body{
     margin: 0px;
+}
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    line-height: 1.4;
+}
+
+h1 {
+    text-align: center;
 }
