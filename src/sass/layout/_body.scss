@@ -15,6 +15,17 @@ h1 {
     text-align: center;
 }
 
+.picture-container{
+    max-width: 100%;
+    width: 600px;
+    display: inline-block;
+    margin-right: 1%;
+}
+
+.pictures {
+    width: 600px;
+}
+
 @mixin dark() {
     background-color: black;
     color: white;

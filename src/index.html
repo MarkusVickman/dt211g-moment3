@@ -45,22 +45,49 @@
     </div>
     </nav>
     <main class="text">
-        <h1>Automatisering & publicering</h1>
-        <p>Den här uppgiften ingår i moment 1 i kursen dt211g - Frontend-baserad webbutveckling. Uppgiften går ut på att
-            publicera
-            en webbplats på en publiceringwebbhost. Med hjälp av paketet parcel i NodeJs ska uppgifter automatiseras.
-            Det som ska
-            automatiseras är följande:</p>
-        <ul>
-            <li>Minifiera CSS-koden</li>
-            <li>Transpilera och minifiera JavaScript-koden</li>
-            <li>Minifiera HTML-koden</li>
-            <li>Bildoptimering till olika format</li>
-            <li>JavaScript-koden Transpileras för kompabilitet</li>
-            <li>Optimerade arbetsfiler kopieras till publiceringsmapp</li>
-        </ul>
-        <p>Sidan innehåller dessutom innehålla två undersidor. En om min arbetsprocess och en med fem optimerade bilder.
+        <h1>Skapa webbplats med SASS</h1>
+        <p>Den här uppgiften ingår i moment 3 i kursen dt211g - Frontend-baserad webbutveckling. Uppgiften går ut på att
+            skapa en webbplats i sass och sedan konvertara den till vanlig css med hjälp av automatiserade verktyg. Webbplatsen måste innehålla:
         </p>
+        <ul>
+            <li>Överskrifter och text med valfritt innehåll.</li>
+            <li>Undersidan SASS ska innehålla en utvärdering av ditt arbete med SASS. Vilka för- och nackdelar ser du med SASS? Hur var det att komma igång att arbete med en CSS-preprocessor?</li>
+            <li>En huvudmeny med minst fem meny-alternativ (kan länkas till enbart "#")</li>
+            <li>Webbplatsen ska ha stöd för ljust och mörkt tema med media query. Ta fram två färgscheman för detta.</li>
+            <li>Responsiv webbdesign, både på innehåll och meny. Ska fungera väl på stora och små enheter.</li>
+            <li>Minst två stycken bilder av något slag.</li>
+        </ul>
+        <p>Webbplatsens CSS-kod ska genereras från SASS-kod. Följande saker ska (minimum) finnas med:</p>
+        <ul>
+            <li>Variabler (minst färgschema ska lagras i variabler)</li>
+            <li>Color functions (darken och lighten ska som minst användas, men använd gärna fler)</li>
+            <li>Nesting</li>
+            <li>Mixins</li>
+            <li>If/else-satser.</li>
+            <li>Minst en partial</li>
+            <li>Partials med en god filstruktur för CSS-kod</li>
+        </ul>
+        <p>
+            För att läsa om min arbetsprocess med SASS och den här uppgiften kan du besöka sidan SASS som du hittar i menyn.
+        </p>
+        <h1>Bilder</h1>
+        <div class="picture-container">    
+        <h2>Tv-dator</h2>
+        <p>För att optimera luftflöde byggdes ett eget chassi av trä, plexiglas och plåt.</p>
+            <picture>
+                <source srcset="img/computer.jpeg?as=webp&width=600" type="image/webp">
+                <img src="img/computer.jpeg?width=600" width="600" alt="Kaffemaskin och kaffekvarn." class="pictures">
+            </picture>
+        </div>
+        <div class="picture-container">
+            <h2>Datorskärm</h2>
+            <p>För att ha en extra datorskärm anpassades en laptopskärm med hjälp av en nytt styrkort.</p>
+            <picture>
+                <source srcset="img/screen.jpeg?as=webp&width=600" type="image/webp">
+                <img src="img/screen.jpeg?width=600" width="600" alt="Enkel och dubbelbottnade espressofilter." class="pictures">
+            </picture>
+        </div>
+    </div>
     </main>
     <footer>
         <a href="sass.html" class="menu-link">Arbetsprocessen</a>
