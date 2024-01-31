@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moment 3</title>
     <!--Länk till scss-fil-->
-    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
 </head>
@@ -17,17 +17,19 @@
                     alt="logotyp med texten Automation"></div>
         </a>
         <button id="btn-open"></button>
-        <nav id="main-nav">
-            <button id="btn-close"></button>
-            <ul>
-                <li><a href="index.html" class="menu-link" id="menu-underline">Startsida</a></li>
-                <li><a href="sass.html" class="menu-link">SASS</a></li>
-                <li><a href="#" class="menu-link">Placeholder</a></li>
-                <li><a href="#" class="menu-link">Placeholder</a></li>
-                <li><a href="#" class="menu-link">Placeholder</a></li>
-            </ul>
-        </nav>
     </header>
+    <nav id="main-nav">
+        <button id="btn-close"></button>
+        <div class="center-menu">
+        <ul>
+            <li><a href="index.html" class="menu-link" id="menu-underline">Startsida</a></li>
+            <li><a href="sass.html" class="menu-link">SASS</a></li>
+            <li><a href="#" class="menu-link">Placeholder</a></li>
+            <li><a href="#" class="menu-link">Placeholder</a></li>
+            <li><a href="#" class="menu-link">Placeholder</a></li>
+        </ul>
+    </div>
+    </nav>
     <main class="text">
         <h1>Automatisering & publicering</h1>
         <p>Den här uppgiften ingår i moment 1 i kursen dt211g - Frontend-baserad webbutveckling. Uppgiften går ut på att

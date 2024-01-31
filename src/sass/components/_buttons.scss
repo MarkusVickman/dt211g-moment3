@@ -1,0 +1,79 @@
+button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2em;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    border-style: none;
+}
+
+/*Menyknapp för öppnaknappen i headern*/
+.menu-btn-open {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #004080;
+    right: 15px;
+    height: 42px;
+    width: 125px;
+    top: 17px;
+    position: absolute;
+    border-width: 0;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+/*Styling av stängmeny-knappen i utfäld meny*/
+.menu-btn-close {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #004080;
+    margin-left: 50%;
+    margin-top: 20px;
+    transform: translate(-50%);
+    width: 180px;
+    border-width: 0;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+/*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
+.bars-cross1 {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transform: rotate(45deg);
+    position: relative;
+    margin-top: 5px;
+}
+
+/*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
+.bars-cross2 {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transform: rotate(-45deg);
+    margin-top: -8px;
+}
+
+/*marginal till streck i menyknappen*/
+.menu-icon {
+    margin-right: 10px;
+}
+
+/*styling av de tre strecken i menyknapp öppna*/
+.bars {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
