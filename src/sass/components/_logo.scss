@@ -11,11 +11,11 @@
 }
 
 body {
-    --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
+    --logo: url(/src/img/Automation-logos_black.svg) no-repeat;
 }
 
 body[data-theme="dark"] {
-    --logo: url(/src/img/Automation-logos_black.svg) no-repeat;
+    --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
   }
 
 .logo:hover {
