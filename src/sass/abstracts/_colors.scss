@@ -1,5 +1,12 @@
-$button: lighten(#004080, 15%);
 
-$hover:darken(rgb(83, 218, 203), 30%);
+$hover: darken(rgb(83, 218, 203), 30%);
 
 $bars: white;
+
+$button: green;
+
+@if ($button == blue) {
+    $button: darken($button, 20%);
+}@else {
+    $button: lighten(darkblue, 10%);
+}

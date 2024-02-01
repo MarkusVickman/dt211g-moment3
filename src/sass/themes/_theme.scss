@@ -29,24 +29,3 @@
         --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
     }
 }
-
-
-body {
-    @if (background-color: white) {
-        #dark {
-            display: none;
-        }
-
-        #light {
-            display: block;
-        }
-    }@else{
-        #dark {
-            display: block;
-        }
-
-        #light {
-            display: none;
-        }
-    }
-}
