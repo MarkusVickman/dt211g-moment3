@@ -1,45 +1,52 @@
 @use "../abstracts/mixins";
 
-@media (prefers-color-scheme: light){
-    body, header, nav, footer,.menu-link {
+@media (prefers-color-scheme: light) {
+
+    body,
+    header,
+    nav,
+    footer,
+    .menu-link {
         @include mixins.light();
     }
 
     body {
         --logo: url(/src/img/Automation-logos_black.svg) no-repeat;
     }
-
-    /*$isitdark: false;*/
 }
 
-@media (prefers-color-scheme: dark){
-    body, header, nav, footer, .menu-link {
+@media (prefers-color-scheme: dark) {
+
+    body,
+    header,
+    nav,
+    footer,
+    .menu-link {
         @include mixins.dark();
     }
 
-    body{
+    body {
         --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
     }
-
-    /*$isitdark: true;*/
 }
 
-@if (body background-color == black) {
-    #dark{
-        display: block;
-    }
-    #light{
-        display: none;
-    }
-    
-}
 
-@else if (body background-color == white) {
-    #dark{
-        display: none;
+body {
+    @if (background-color: white) {
+        #dark {
+            display: none;
+        }
+
+        #light {
+            display: block;
+        }
+    }@else{
+        #dark {
+            display: block;
+        }
+
+        #light {
+            display: none;
+        }
     }
-    #light{
-        display: block;
-    }
-    
 }

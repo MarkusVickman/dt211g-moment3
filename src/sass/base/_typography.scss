@@ -12,6 +12,7 @@ h2, h3 {
 
 p {
     margin-top: 5px;
+    font-size: 1em;
 }
 
 button {
@@ -37,4 +38,24 @@ nav {
 
 footer {
     text-align: center;
+}
+
+$text: 1.2em;
+
+@if ($text == 1em) {
+    #dark{
+        display: block;
+    }
+    #light{
+        display: none;
+    }
+}
+
+@else {
+    #dark{
+        display: none;
+    }
+    #light{
+        display: block;
+    }
 }

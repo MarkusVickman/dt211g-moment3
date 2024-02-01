@@ -3,22 +3,34 @@ body {
 }
 
 main {
-    padding-left: 5%;
-    padding-right: 5%;
+    margin-left: 1%;
     max-width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
 .picture-container{
-    max-width: 100%;
-    width: 600px;
+    @extend .pictures;
     display: inline-block;
-    margin-left: 1%;
-    margin-right: 1%;
+    text-align: center;
 }
 
 .pictures {
     width: 600px;
     max-width: 100%;
+}
+
+@media (min-width: 700px) {
+    main {
+        width: 70%;
+        margin-left: 13%;
+}
+}
+
+@media (min-width: 1500px) {
+    main {
+        width: 750px;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
 }
