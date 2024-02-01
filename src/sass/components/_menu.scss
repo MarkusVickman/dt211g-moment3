@@ -1,10 +1,12 @@
 @use "../abstracts/colors";
 
+
+/*
 nav ul {
     margin-top: 70px;
     padding: 0;
 }
-
+*/
 .menu-link:hover {
     background-color: colors.$hover;
 }
@@ -25,6 +27,11 @@ nav {
     z-index: 2;
     display: none;
     border-width: 0;
+
+    ul{
+        margin-top: 70px;
+        padding: 0;
+    }
 }
 
 #ph-link:hover {
@@ -50,34 +57,52 @@ nav {
   }
 
 @media (min-width: 700px) {
-    nav li {
+
+    nav {
+        border-top: 1px;
+        border-bottom: 1px;
+        border-style: solid;
+        display: block;
+        height: 42px;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+    
+        ul{
+            margin-top:0px;
+            margin-bottom: 0px;
+        }
+        li{
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+  /*  nav li {
         display: inline-block;
-        /*margin-right: 15px;*/
         margin-left: 20px;
 }
 
     nav ul {
         margin-top:0px;
         margin-bottom: 0px;
-    }
+    }*/
 
     .center-menu{
         margin-left: 50%;
         transform: translate(-50%);
         width: 590px;
     }
-
+/*
     nav {
         border-top: 1px;
         border-bottom: 1px;
         border-style: solid;
-        width: 100%;
         display: block;
         height: 42px;
-        position: -webkit-sticky; /* Safari */
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
-    }
+    }*/
 
     .menu-link {
         margin: auto;

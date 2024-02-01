@@ -10,10 +10,7 @@ button {
     font-size: 1.2em;
 }
 
-nav li {
-    list-style: none;
-    font-size: 1.2em;
-}
+
 
 .menu-link {
     text-decoration: none;
@@ -25,9 +22,13 @@ nav li {
 
 nav {
     text-align: center;
+
+    li {
+        list-style: none;
+        font-size: 1.2em;
+    }
 }
 
 footer {
     text-align: center;
 }
-
