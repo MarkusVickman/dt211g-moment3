@@ -3,57 +3,22 @@ body {
 }
 
 main {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     max-width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
-    line-height: 1.4;
-}
-
-h1 {
-    text-align: center;
 }
 
 .picture-container{
     max-width: 100%;
     width: 600px;
     display: inline-block;
-    margin-right: 1%;
+    margin: 2%;
+
 }
 
 .pictures {
     width: 600px;
-}
-
-@mixin dark() {
-    background-color: black;
-    color: white;
-    border-color: white;
-}
-
-@mixin light() {
-    background-color: white;
-    color: black;
-    border-color: black;
-}
-
-@media (prefers-color-scheme: light){
-    body, header, nav, footer,.menu-link {
-        @include light();
-    }
-
-    body {
-        --logo: url(/src/img/Automation-logos_black.svg) no-repeat;
-    }
-}
-
-@media (prefers-color-scheme: dark){
-    body, header, nav, footer, .menu-link {
-        @include dark();
-    }
-
-    body{
-        --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
-    }
+    max-width: 100%;
 }
