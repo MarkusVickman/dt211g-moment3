@@ -3,14 +3,12 @@ main {
 }
 
 h1 {
-    text-align: center;
+    @extend footer;
 }
 
 button {
     font-size: 1.2em;
 }
-
-
 
 .menu-link {
     text-decoration: none;
@@ -21,7 +19,7 @@ button {
 }
 
 nav {
-    text-align: center;
+    @extend footer;
 
     li {
         list-style: none;

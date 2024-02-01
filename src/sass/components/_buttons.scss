@@ -50,28 +50,27 @@ button:hover {
 }
 
 /*styling av de tre strecken i menyknapp öppna*/
-.bars, .bars-cross1, .bars-cross2  {
+.bars{
     position: relative;
     display: block;
     width: 20px;
     height: 3px;
     background-color: colors.$bars;
-}
-
-.bars{
     margin: 5px 0;
 }
 
 /*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
 .bars-cross1 {
     transform: rotate(45deg);
-    margin-top: 3px;
+    margin: 2px 0 0 0;
+    @extend .bars;
 }
 
 /*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
 .bars-cross2 {
     transform: rotate(-45deg);
-    margin-top: -4px;
+    margin: -3px 0 0 0;
+    @extend .bars;
 }
 
 @media (min-width: 700px) {
