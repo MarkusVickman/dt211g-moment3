@@ -1,19 +1,8 @@
-
-@mixin dark() {
-    background-color: black;
-    color: white;
-    border-color: white;
-}
-
-@mixin light() {
-    background-color: white;
-    color: black;
-    border-color: black;
-}
+@use "../abstracts/mixins";
 
 @media (prefers-color-scheme: light){
     body, header, nav, footer,.menu-link {
-        @include light();
+        @include mixins.light();
     }
 
     body {
@@ -23,7 +12,7 @@
 
 @media (prefers-color-scheme: dark){
     body, header, nav, footer, .menu-link {
-        @include dark();
+        @include mixins.dark();
     }
 
     body{

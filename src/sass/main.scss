@@ -1,8 +1,9 @@
+
+@use "themes/theme";
+@use "base/typography";
 @use "components/menu";
 @use "components/logo";
+@use "components/buttons";
 @use "layout/header";
 @use "layout/body";
-@use "components/buttons";
 @use "layout/footer";
-@use "base/typography";
-@use "themes/themes";
