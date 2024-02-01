@@ -1,15 +1,14 @@
+@use "../abstracts/colors";
+
 button {
     position: absolute;
-    background-color: darkblue;
+    background-color: colors.$button;
     border-radius: 5px;
     border-style: none;
 }
 
 button:hover {
-    background-color: rgb(0, 144, 192);
-}
-#btn-open:hover, #btn-close:hover{
-    background-color: rgb(0, 144, 192);
+    background-color: colors.$hover;
 }
 
 /*Menyknapp för öppnaknappen i headern*/
@@ -17,12 +16,11 @@ button:hover {
     display: flex;
     align-items: center;
     padding: 8px 15px;
-    background-color: #004080;
     right: 15px;
     top: 27px;
     border-width: 0;
     border-radius: 5px;
-    color: white;
+    color: colors.$bars;
     box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
@@ -35,39 +33,16 @@ button:hover {
     display: flex;
     align-items: center;
     padding: 8px 15px;
-    background-color: #004080;
     margin-left: 50%;
     margin-top: 20px;
     transform: translate(-50%);
     width: 180px;
     border-width: 0;
     border-radius: 5px;
-    color: white;
+    color: colors.$bars;
     box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
-/*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
-.bars-cross1 {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transform: rotate(45deg);
-    position: relative;
-    margin-top: 5px;
-}
-
-/*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
-.bars-cross2 {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transform: rotate(-45deg);
-    margin-top: -8px;
-}
 
 /*marginal till streck i menyknappen*/
 .menu-icon {
@@ -75,12 +50,28 @@ button:hover {
 }
 
 /*styling av de tre strecken i menyknapp öppna*/
-.bars {
+.bars, .bars-cross1, .bars-cross2  {
+    position: relative;
     display: block;
     width: 20px;
     height: 3px;
-    background-color: white;
+    background-color: colors.$bars;
+}
+
+.bars{
     margin: 5px 0;
+}
+
+/*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
+.bars-cross1 {
+    transform: rotate(45deg);
+    margin-top: 3px;
+}
+
+/*styling av stäck som är vridna till ett kors i stängknappen i menyn*/
+.bars-cross2 {
+    transform: rotate(-45deg);
+    margin-top: -4px;
 }
 
 @media (min-width: 700px) {
