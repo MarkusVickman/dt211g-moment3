@@ -8,6 +8,8 @@
     body {
         --logo: url(/src/img/Automation-logos_black.svg) no-repeat;
     }
+
+    /*$isitdark: false;*/
 }
 
 @media (prefers-color-scheme: dark){
@@ -18,4 +20,26 @@
     body{
         --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
     }
+
+    /*$isitdark: true;*/
+}
+
+@if (body background-color == black) {
+    #dark{
+        display: block;
+    }
+    #light{
+        display: none;
+    }
+    
+}
+
+@else if (body background-color == white) {
+    #dark{
+        display: none;
+    }
+    #light{
+        display: block;
+    }
+    
 }

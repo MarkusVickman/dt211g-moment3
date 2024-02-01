@@ -6,6 +6,14 @@ h1 {
     @extend footer;
 }
 
+h2, h3 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 5px;
+}
+
 button {
     font-size: 1.2em;
 }
