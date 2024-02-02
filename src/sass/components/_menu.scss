@@ -1,22 +1,18 @@
 @use "../abstracts/colors";
 
 
-/*
-nav ul {
-    margin-top: 70px;
-    padding: 0;
-}
-*/
-.menu-link:hover {
-    background-color: colors.$hover;
-}
-
+//Styling av en klass för menylänkar
 .menu-link {
     padding: 10px;
     border-radius: 5px;
     display: block;
 }
 
+.menu-link:hover {
+    background-color: colors.$hover;
+}
+
+//Styling av huvudmeny
 nav {
     max-width: 100%;
     width: 100%;
@@ -34,14 +30,15 @@ nav {
     }
 }
 
+//Skakanimation för länkar i menyn som inte fungerar
 .ph-link:hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
   
-    /* When the animation is finished, start again */
+    /*Återupprepande animation*/
     animation-iteration-count: infinite;
   }
 
+//Skakanimation för länkar i menyn som inte fungerar
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -56,6 +53,7 @@ nav {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
+//media querie för att navigeringen ska visas annorlunda på större skärmar
 @media (min-width: 700px) {
 
     nav {
@@ -77,32 +75,12 @@ nav {
             margin-left: 20px;
         }
     }
-  /*  nav li {
-        display: inline-block;
-        margin-left: 20px;
-}
-
-    nav ul {
-        margin-top:0px;
-        margin-bottom: 0px;
-    }*/
 
     .center-menu{
         margin-left: 50%;
         transform: translate(-50%);
-        width: 590px;
+        width: 670px;
     }
-/*
-    nav {
-        border-top: 1px;
-        border-bottom: 1px;
-        border-style: solid;
-        display: block;
-        height: 42px;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-    }*/
 
     .menu-link {
         margin: auto;

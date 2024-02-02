@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,21 @@
     <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!--Typsnitt inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!--Header med logotyp och knapp för att öppna mobilmeny-->
     <header>
+        <!--Logotypen ändras vid temabyte och laddas in i sass partial _theme-->
         <a href="index.html">
-            <div class="logo"><!--<img width="200" height="78" src="img/Automation-logos_white.svg"
-                    alt="logotyp med texten Automation">--></div>
+            <div class="logo"></div>
         </a>
         <button id="btn-open">
             <span>
@@ -24,6 +33,7 @@
             </span>
         </button>
     </header>
+    <!--Navigeringen ligger under headern för att dynamiskt fastna längst upp istället för header vid scrollande-->
     <nav id="main-nav">
         <button id="btn-close">
             <span class="menu-icon">
@@ -35,29 +45,40 @@
             </span>
         </button>
         <div class="center-menu">
-        <ul>
-            <li><a href="index.html" class="menu-link">Startsida</a></li>
-            <li><a href="sass.html" class="menu-link" id="menu-underline">SASS</a></li>
-            <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
-            <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
-            <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li><a href="index.html" class="menu-link">Startsida</a></li>
+                <li><a href="sass.html" class="menu-link" id="menu-underline">SASS</a></li>
+                <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
+                <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
+                <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
+            </ul>
+        </div>
     </nav>
     <main>
-        <div  class="text">
-        <h1>Sass</h1>
-        <p>Jag upplevde att det var ett ganska stort uppdrag att lära sig SASS för att utföra den här uppgiften. 
-            Enligt mig tillför SASS mycket komplicitet men istället gör koden mer modulär och lättare att underhålla. 
-            Det var svårt att implementera if/else-satser till något användbart.
-            Det är inte så lätt att uppleva fördelarna i ett sån här relativt liten uppgift. Men jag ser fördelar med mixins 
-            och även variabler. Det var också kul att se hur enkelt det var att anpassa sidan efter dark och lightmode 
-            med hjälp av media query och mixins.
-        </p>
-        <h2>Lösningar</h2>
-        <ul><li>If/Else används för att kontrollera knappfärger.</li>
-        <li>Mixins and</li></ul>
-    </div>
+        <!--Header med logotyp och knapp för att öppna mobilmeny-->
+        <div class="text">
+            <h1>Sass</h1>
+            <p>Jag upplevde att det var ett ganska stort uppdrag att lära sig SASS för att utföra den här uppgiften.
+                Enligt mig tillför SASS mycket komplicitet men istället gör koden mer modulär och lättare att
+                underhålla.
+                Det var svårt att implementera if/else-satser till något användbart.
+                Det är inte så lätt att uppleva fördelarna i ett sån här relativt liten uppgift. Men jag ser fördelar
+                med mixins
+                och även variabler. Det var också kul att se hur enkelt det var att anpassa sidan efter dark och
+                lightmode
+                med hjälp av media query och mixins.
+            </p>
+            <h2>Lösningar</h2>
+            <ul>
+                <li>Variabler används för att lagra färgerna som används på webbplatsen.</li>
+                <li>Color functions används till knapparnas färg och till lightmode i mixins-filen.</li>
+                <li>Nesting används lite i koden för menyn och typografi.</li>
+                <li>Mixins innehåller utseendet för darkmode och lightmode. Färgläge bestäms utifrån användaren
+                    inställningar med hjälp av media query.</li>
+                <li>If/Else används för att kontrollera knappfärger och ändra till rätt färg.</li>
+                <li>Nio partials har används för SASS-koden och de är placerade i olika mappar utifrån kategori.</li>
+            </ul>
+        </div>
     </main>
     <footer>
         <a href="sass.html" class="menu-link">Arbetsprocessen</a>

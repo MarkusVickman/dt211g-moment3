@@ -1,13 +1,13 @@
-
-
+//mixin för mörkttema till webbplatsen
 @mixin dark() {
     background-color: black;
     color: white;
     border-color: white;
 }
 
+//Mixin för ljusttema till webbplatsen
 @mixin light() {
-    background-color: white;
+    background-color: darken(white, 2%);
     color: black;
     border-color: black;
 }

@@ -1,46 +1,41 @@
 @use "../abstracts/colors";
 
+//Generell styling av knappar
 button {
     position: absolute;
     background-color: colors.$button;
     border-radius: 5px;
     border-style: none;
+    align-items: center;
+    padding: 8px 15px;
+    border-width: 0;
+    border-radius: 5px;
+    color: colors.$bars;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 button:hover {
     background-color: colors.$hover;
 }
 
-/*Menyknapp för öppnaknappen i headern*/
+/*Specifik styling Menyknapp för öppnaknappen i headern*/
 #btn-open {
     display: flex;
-    align-items: center;
-    padding: 8px 15px;
-    right: 15px;
+    right: 25px;
     top: 27px;
-    border-width: 0;
-    border-radius: 5px;
-    color: colors.$bars;
-    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 .meny-text{
     position: relative;
 }
 
-/*Styling av stängmeny-knappen i utfäld meny*/
+/*Specifik styling av stängmeny-knappen i utfälld meny*/
 #btn-close {
     display: flex;
-    align-items: center;
-    padding: 8px 15px;
     margin-left: 50%;
     margin-top: 20px;
     transform: translate(-50%);
     width: 180px;
-    border-width: 0;
-    border-radius: 5px;
-    color: colors.$bars;
-    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 
@@ -73,6 +68,7 @@ button:hover {
     @extend .bars;
 }
 
+//Döljer knappar vid visning på större skärmar
 @media (min-width: 700px) {
 #btn-close,
 #btn-open {

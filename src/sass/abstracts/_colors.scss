@@ -1,10 +1,13 @@
-
+//för vid hover över knappar och länkar
 $hover: darken(rgb(83, 218, 203), 30%);
 
+//färg för linjer i knappar
 $bars: white;
 
+//Knappfärg
 $button: green;
 
+//Knappfärgen ändras i denna if else sats och den nya färgen blir en mörknyas av blå istället.
 @if ($button == blue) {
     $button: darken($button, 20%);
 }@else {

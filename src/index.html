@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <!--Typsnitt inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!--Header med logotyp och knapp för att öppna mobilmeny-->
     <header>
+        <!--Logotypen ändras vid temabyte och laddas in i sass partial _theme-->
         <a href="index.html">
-            <div class="logo"><!--<img width="200" height="78" src="img/Automation-logos_white.svg"
-                    alt="logotyp med texten Automation">--></div>
+            <div class="logo"></div>
         </a>
         <button id="btn-open">
             <span>
@@ -25,6 +33,7 @@
             </span>
         </button>
     </header>
+    <!--Navigeringen ligger under headern för att dynamiskt fastna längst upp istället för header vid scrollande-->
     <nav id="main-nav">
         <button id="btn-close">
             <span class="menu-icon">
@@ -46,6 +55,7 @@
         </div>
     </nav>
     <main>
+        <!--Div men sidans huvud innehåll som centrerar-->
         <div class="text">
             <h1>Skapa webbplats med SASS</h1>
             <p>Den här uppgiften ingår i moment 3 i kursen dt211g - Frontend-baserad webbutveckling. Uppgiften går ut på
@@ -78,20 +88,21 @@
                 i menyn.
             </p>
         </div>
+        <!--Div för bilder så att de centrerar snygg oberoende av resterande sida.-->
         <div class="picture-container">
             <h2>Bilder</h2>
-
+            <p>Bilder av mina funktionella men mindre snygga lösningar på problem.</p>
             <h3>Tv-dator</h3>
             <p>För att optimera luftflöde byggdes ett eget chassi av trä, plexiglas och plåt.</p>
             <picture>
-                <source srcset="img/computer.jpeg?as=webp&width=600" type="image/webp">
-                <img src="img/computer.jpeg?width=600" width="600" alt="Kaffemaskin och kaffekvarn." class="pictures">
+                <source srcset="img/computer.jpeg?as=webp&width=800" type="image/webp">
+                <img src="img/computer.jpeg?width=800" width="800" alt="Kaffemaskin och kaffekvarn." class="pictures">
             </picture>
             <h3>Datorskärm</h3>
             <p>För att ha en extra datorskärm anpassades en laptopskärm med hjälp av en nytt styrkort.</p>
             <picture>
-                <source srcset="img/screen.jpeg?as=webp&width=600" type="image/webp">
-                <img src="img/screen.jpeg?width=600" width="600" alt="Enkel och dubbelbottnade espressofilter."
+                <source srcset="img/screen.jpeg?as=webp&width=800" type="image/webp">
+                <img src="img/screen.jpeg?width=800" width="800" alt="Enkel och dubbelbottnade espressofilter."
                     class="pictures">
             </picture>
         </div>

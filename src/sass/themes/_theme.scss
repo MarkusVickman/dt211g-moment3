@@ -1,5 +1,6 @@
 @use "../abstracts/mixins";
 
+//Media querie som ändrar sidans tema till ljustläge om det är föredraget.
 @media (prefers-color-scheme: light) {
 
     body,
@@ -9,12 +10,14 @@
     .menu-link {
         @include mixins.light();
     }
-
+    
+    //Logotypen ändras också vid temabyte
     body {
         --logo: url(/src/img/Automation-logos_black.svg) no-repeat;
     }
 }
 
+//Media querie som ändrar sidans tema till mörkt om det är föredraget.
 @media (prefers-color-scheme: dark) {
 
     body,
@@ -25,6 +28,7 @@
         @include mixins.dark();
     }
 
+    //Logotypen ändras också vid temabyte
     body {
         --logo: url(/src/img/Automation-logos_white.svg) no-repeat;
     }

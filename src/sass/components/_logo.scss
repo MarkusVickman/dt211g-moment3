@@ -1,5 +1,6 @@
 @use "../abstracts/colors";
 
+//Placering och storlek av logotyp. Laddas in från media querie för färgtema och med CSS-variabel
 .logo {
     position: absolute;
     top: 15px;
@@ -16,13 +17,7 @@
     background-color: colors.$hover;
 }
 
-@media (min-width: 700px) {
-    .logo {
-        z-index: 3;
-    }
-
-}
-
+/*media querie som gör att logotyp och menyknapp fungerar ända ner till 250px visningsbredd*/
 @media (max-width: 320px) {
     .logo {
         transform: none;

@@ -1,3 +1,11 @@
+//Variable för font-family
+$font-stack: 'Inter', sans-serif;
+
+//Hela sidan använder font-stack.variabeln till typsnitt
+body {
+    font-family: $font-stack;
+}
+
 main {
     line-height: 1.4;
 }
@@ -38,24 +46,4 @@ nav {
 
 footer {
     text-align: center;
-}
-
-$text: 1.2em;
-
-@if ($text == 1em) {
-    #dark{
-        display: block;
-    }
-    #light{
-        display: none;
-    }
-}
-
-@else {
-    #dark{
-        display: none;
-    }
-    #light{
-        display: block;
-    }
 }
