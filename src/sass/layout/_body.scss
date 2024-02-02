@@ -9,28 +9,22 @@ main {
     margin-bottom: 50px;
 }
 
+.text {
+    max-width: 100%;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .picture-container{
     @extend .pictures;
-    display: inline-block;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .pictures {
     width: 600px;
     max-width: 100%;
-}
 
-@media (min-width: 700px) {
-    main {
-        width: 70%;
-        margin-left: 13%;
-}
-}
-
-@media (min-width: 1500px) {
-    main {
-        width: 750px;
-        margin-left: 50%;
-        transform: translate(-50%);
-    }
 }

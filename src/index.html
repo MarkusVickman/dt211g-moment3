@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,45 +36,53 @@
             </span>
         </button>
         <div class="center-menu">
-        <ul>
-            <li><a href="index.html" class="menu-link" id="menu-underline">Startsida</a></li>
-            <li><a href="sass.html" class="menu-link">SASS</a></li>
-            <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
-            <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
-            <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
-        </ul>
-    </div>
+            <ul>
+                <li><a href="index.html" class="menu-link" id="menu-underline">Startsida</a></li>
+                <li><a href="sass.html" class="menu-link">SASS</a></li>
+                <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
+                <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
+                <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
+            </ul>
+        </div>
     </nav>
-    <main class="text">
-        <h1>Skapa webbplats med SASS</h1>
-        <p>Den här uppgiften ingår i moment 3 i kursen dt211g - Frontend-baserad webbutveckling. Uppgiften går ut på att
-            skapa en webbplats i sass och sedan konvertara den till vanlig css med hjälp av automatiserade verktyg. Webbplatsen måste innehålla:
-        </p>
-        <ul>
-            <li>Överskrifter och text med valfritt innehåll.</li>
-            <li>Undersidan SASS ska innehålla en utvärdering av ditt arbete med SASS. Vilka för- och nackdelar ser du med SASS? Hur var det att komma igång att arbete med en CSS-preprocessor?</li>
-            <li>En huvudmeny med minst fem meny-alternativ (kan länkas till enbart "#")</li>
-            <li>Webbplatsen ska ha stöd för ljust och mörkt tema med media query. Ta fram två färgscheman för detta.</li>
-            <li>Responsiv webbdesign, både på innehåll och meny. Ska fungera väl på stora och små enheter.</li>
-            <li>Minst två stycken bilder av något slag.</li>
-        </ul>
-        <p>Webbplatsens CSS-kod ska genereras från SASS-kod. Följande saker ska (minimum) finnas med:</p>
-        <ul>
-            <li>Variabler (minst färgschema ska lagras i variabler)</li>
-            <li>Color functions (darken och lighten ska som minst användas, men använd gärna fler)</li>
-            <li>Nesting</li>
-            <li>Mixins</li>
-            <li>If/else-satser.</li>
-            <li>Minst en partial</li>
-            <li>Partials med en god filstruktur för CSS-kod</li>
-        </ul>
-        <p>
-            För att läsa om min arbetsprocess med SASS och den här uppgiften kan du besöka sidan SASS som du hittar i menyn.
-        </p>
-        <h2>Bilder</h2>
-        <div class="picture-container">    
-        <h3>Tv-dator</h3>
-        <p>För att optimera luftflöde byggdes ett eget chassi av trä, plexiglas och plåt.</p>
+    <main>
+        <div class="text">
+            <h1>Skapa webbplats med SASS</h1>
+            <p>Den här uppgiften ingår i moment 3 i kursen dt211g - Frontend-baserad webbutveckling. Uppgiften går ut på
+                att
+                skapa en webbplats i sass och sedan konvertara den till vanlig css med hjälp av automatiserade verktyg.
+                Webbplatsen måste innehålla:
+            </p>
+            <ul>
+                <li>Överskrifter och text med valfritt innehåll.</li>
+                <li>Undersidan SASS ska innehålla en utvärdering av ditt arbete med SASS. Vilka för- och nackdelar ser
+                    du med SASS? Hur var det att komma igång att arbete med en CSS-preprocessor?</li>
+                <li>En huvudmeny med minst fem meny-alternativ (kan länkas till enbart "#")</li>
+                <li>Webbplatsen ska ha stöd för ljust och mörkt tema med media query. Ta fram två färgscheman för detta.
+                </li>
+                <li>Responsiv webbdesign, både på innehåll och meny. Ska fungera väl på stora och små enheter.</li>
+                <li>Minst två stycken bilder av något slag.</li>
+            </ul>
+            <p>Webbplatsens CSS-kod ska genereras från SASS-kod. Följande saker ska (minimum) finnas med:</p>
+            <ul>
+                <li>Variabler (minst färgschema ska lagras i variabler)</li>
+                <li>Color functions (darken och lighten ska som minst användas, men använd gärna fler)</li>
+                <li>Nesting</li>
+                <li>Mixins</li>
+                <li>If/else-satser.</li>
+                <li>Minst en partial</li>
+                <li>Partials med en god filstruktur för CSS-kod</li>
+            </ul>
+            <p>
+                För att läsa om min arbetsprocess med SASS och den här uppgiften kan du besöka sidan SASS som du hittar
+                i menyn.
+            </p>
+        </div>
+        <div class="picture-container">
+            <h2>Bilder</h2>
+
+            <h3>Tv-dator</h3>
+            <p>För att optimera luftflöde byggdes ett eget chassi av trä, plexiglas och plåt.</p>
             <picture>
                 <source srcset="img/computer.jpeg?as=webp&width=600" type="image/webp">
                 <img src="img/computer.jpeg?width=600" width="600" alt="Kaffemaskin och kaffekvarn." class="pictures">
@@ -82,7 +91,8 @@
             <p>För att ha en extra datorskärm anpassades en laptopskärm med hjälp av en nytt styrkort.</p>
             <picture>
                 <source srcset="img/screen.jpeg?as=webp&width=600" type="image/webp">
-                <img src="img/screen.jpeg?width=600" width="600" alt="Enkel och dubbelbottnade espressofilter." class="pictures">
+                <img src="img/screen.jpeg?width=600" width="600" alt="Enkel och dubbelbottnade espressofilter."
+                    class="pictures">
             </picture>
         </div>
     </main>
