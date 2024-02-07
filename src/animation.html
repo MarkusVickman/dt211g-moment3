@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SASS</title>
+    <title>Animering</title>
     <!--Länk till scss-fil-->
     <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
+        <!--Länk till javascript för scrollanimation-->
+        <script type="module" src="js/scroll_event.js"></script>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -47,17 +49,18 @@
         <div class="center-menu">
             <ul>
                 <li><a href="index.html" class="menu-link">Startsida</a></li>
-                <li><a href="sass.html" class="menu-link" id="menu-underline">SASS</a></li>
-                <li><a href="animation.html" class="menu-link">Animering</a></li>
+                <li><a href="sass.html" class="menu-link">SASS</a></li>
+                <li><a href="animation.html" class="menu-link" id="menu-underline">Animering</a></li>
                 <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
                 <li><a href="#" class="menu-link ph-link">Placeholder</a></li>
             </ul>
         </div>
     </nav>
+    <img src="img/arrow.svg" width="150" height="250" id="arrow">
     <main>
         <!--Header med logotyp och knapp för att öppna mobilmeny-->
         <div class="text">
-            <h1>Sass</h1>
+            <h1 class="left-to-right">Animering</h1>
             <p>Jag upplevde att det var ett ganska stort uppdrag att lära sig SASS för att utföra den här uppgiften.
                 Enligt mig tillför SASS mycket komplicitet men istället gör koden mer modulär och lättare att
                 underhålla.
