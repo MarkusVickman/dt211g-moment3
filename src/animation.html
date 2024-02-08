@@ -25,7 +25,7 @@
     <header>
         <!--Logotypen ändras vid temabyte och laddas in i sass partial _theme-->
         <a href="index.html">
-            <div class="logo"></div>
+            <div class="logo drop"></div>
         </a>
         <button id="btn-open">
             <span>
@@ -60,27 +60,35 @@
     <main>
         <!--Header med logotyp och knapp för att öppna mobilmeny-->
         <div class="text">
-            <h1 class="left-to-right">Animering</h1>
-            <p>Jag upplevde att det var ett ganska stort uppdrag att lära sig SASS för att utföra den här uppgiften.
-                Enligt mig tillför SASS mycket komplicitet men istället gör koden mer modulär och lättare att
-                underhålla.
-                Det var svårt att implementera if/else-satser till något användbart.
-                Det är inte så lätt att uppleva fördelarna i ett sån här relativt liten uppgift. Men jag ser fördelar
-                med mixins
-                och även variabler. Det var också kul att se hur enkelt det var att anpassa sidan efter dark och
-                lightmode
-                med hjälp av media query och mixins.
-            </p>
+            <h1 class="titleAnimation">Animering</h1>
+            <p>Den här sidan är min lösning på moment 4 i kursen DT211G Frontend-baserad webbutveckling.            </p>
             <h2>Lösningar</h2>
             <ul>
-                <li>Variabler används för att lagra färgerna som används på webbplatsen.</li>
-                <li>Color functions används till knapparnas färg och till lightmode i mixins-filen.</li>
-                <li>Nesting används lite i koden för menyn och typografi.</li>
-                <li>Mixins innehåller utseendet för darkmode och lightmode. Färgläge bestäms utifrån användaren
-                    inställningar med hjälp av media query.</li>
+                <li>Animering av länkar som inte används.</li>
+                <li>Vid hover roterar logotypen.</li>
+                <li>Huvudrubriken glider fram och tillbaka.</li>
+                <li>Vid scroll visas en pilanimation.</li>
                 <li>If/Else används för att kontrollera knappfärger och ändra till rätt färg.</li>
                 <li>Nio partials har används för SASS-koden och de är placerade i olika mappar utifrån kategori.</li>
             </ul>
+        </div>
+
+        <div class="picture-container">
+            <h2>Bilder</h2>
+            <p>Bilder av mina funktionella men mindre snygga lösningar på problem.</p>
+            <h3>Tv-dator</h3>
+            <p>För att optimera luftflöde byggdes ett eget chassi av trä, plexiglas och plåt.</p>
+            <picture>
+                <source srcset="img/computer.jpeg?as=webp&width=800" type="image/webp">
+                <img src="img/computer.jpeg?width=800" width="800" alt="Kaffemaskin och kaffekvarn." class="pictures">
+            </picture>
+            <h3>Datorskärm</h3>
+            <p>För att ha en extra datorskärm anpassades en laptopskärm med hjälp av en nytt styrkort.</p>
+            <picture>
+                <source srcset="img/screen.jpeg?as=webp&width=800" type="image/webp">
+                <img src="img/screen.jpeg?width=800" width="800" alt="Enkel och dubbelbottnade espressofilter."
+                    class="pictures">
+            </picture>
         </div>
     </main>
     <footer>
