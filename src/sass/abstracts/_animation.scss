@@ -55,10 +55,14 @@
 
 //H1 Titel animationsstyling
 .titleAnimation {
+  text-align: center;
   margin-top: 100px;
-  animation: title 120s;
+  animation: title 20s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  margin-left: auto;
+  margin-right: auto;
+  width: 165px;
 }
 
 //Animation för H1 som glider sakta över sidan
@@ -68,7 +72,7 @@
   }
 
   25% {
-    transform: translate(-50%, 0%);
+    transform: translate(-20%, 0%);
   }
 
   50% {
@@ -76,7 +80,7 @@
   }
 
   75% {
-    transform: translate(50%, 0%);
+    transform: translate(15%, 0%);
   }
 
   100% {
@@ -322,5 +326,27 @@
   .drop:hover {
     animation: logoRotate 3s;
     animation-fill-mode: forwards;
+  }
+
+  @keyframes title {
+    0% {
+      transform: translate(-0%, 0%);
+    }
+  
+    25% {
+      transform: translate(-90%, 0%);
+    }
+  
+    50% {
+      transform: translate(0%, 0%);
+    }
+  
+    75% {
+      transform: translate(80%, 0%);
+    }
+  
+    100% {
+      transform: translate(0%, 0%);
+    }
   }
 }
