@@ -1,3 +1,5 @@
+@use "../abstracts/mixins";
+
 body {
     margin: 0px;
 }
@@ -28,7 +30,20 @@ main {
 
 //Bildstorlek
 .pictures {
-    width: 800px;
+    width: 400px;
     max-width: 100%;
     
+}
+
+#inputcolor {
+    text-align: center;
+    input{
+        margin-bottom: 10px;
+        width: 90px;
+    }
+    button {
+        @include mixins.button;
+        width: 100px;
+        margin-left: -50px;
+    }
 }

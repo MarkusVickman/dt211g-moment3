@@ -1,27 +1,59 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 
 //Skakanimation för länkar i menyn som inte fungerar
 .ph-link:hover {
-    animation: shake 0.5s;
-  
-    /*Återupprepande animation*/
-    animation-iteration-count: infinite;
-  }
+  animation: shake 0.5s;
+
+  /*Återupprepande animation*/
+  animation-iteration-count: infinite;
+}
 
 //Skakanimation för länkar i menyn som inte fungerar
 @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
 
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+}
+
+//H1 Titel animationsstyling
 .titleAnimation {
   margin-top: 100px;
   animation: title 120s;
@@ -29,185 +61,205 @@
   animation-iteration-count: infinite;
 }
 
+//Animation för H1 som glider sakta över sidan
 @keyframes title {
-  0% { transform: translate(-0%, 0%);}
-  25% { transform: translate(-50%, 0%);}
-  50% { transform: translate( 0%, 0%);}
-  75% { transform: translate( 50%, 0%);}
-  100% { transform: translate( 0%, 0%);}
+  0% {
+    transform: translate(-0%, 0%);
+  }
+
+  25% {
+    transform: translate(-50%, 0%);
+  }
+
+  50% {
+    transform: translate(0%, 0%);
+  }
+
+  75% {
+    transform: translate(50%, 0%);
+  }
+
+  100% {
+    transform: translate(0%, 0%);
+  }
 }
 
-
+//Position av en pil som ska visas vid scorr med hjälp av javascript
 #arrow {
   position: absolute;
   transform: translate(-50%);
   margin-left: 50%;
+  margin-top: 30%;
   animation: scroll 5s;
   animation-timing-function: linear;
   animation-iteration-count: 2;
   display: none;
 }
 
+//Animationen som tillhör arrow som gör att den rör sig upp och ner vid skroll
 @keyframes scroll {
-  0% {display: none;}
-  0% { transform: translate(-50%, 0%);}
-  1% {display: block;}
-  50% { transform: translate(-50%, 100%);}
-  100% { transform: translate(-50%, 0%);}
-  100% {display: none;}
+  0% {
+    display: none;
+  }
+
+  0% {
+    transform: translate(-50%, 0%);
+  }
+
+  1% {
+    display: block;
+  }
+
+  50% {
+    transform: translate(-50%, 100%);
+  }
+
+  100% {
+    transform: translate(-50%, 0%);
+  }
+
+  100% {
+    display: none;
+  }
 }
 
+//Vid hoover över bilder ska en zoomande animation starta
 .picture-container:hover {
-  animation: zooma 3s;
+  animation: zooma 5s;
   animation-fill-mode: forwards;
+
   .pictures {
     width: 100%;
-  }  
+  }
 }
 
-
+//Zoomande animation till bilder
 @keyframes zooma {
-  0% {width: 800px;}
-  100% {width: 1200px;}
+  0% {
+    width: 400px;
+  }
+
+  100% {
+    width: 1200px;
+  }
 }
 
-@mixin triangle() {
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  border-right: $triangle-size solid transparent;
-  border-bottom: $triangle-size solid transparent;
-  border-left: $triangle-size solid transparent;
-  position: absolute;
-
-}
-
-#slice-container{
+//Behållade till alla triangle slicear
+#slice-container {
   transform: translate(-50%);
   margin-left: 50%;
   width: 60px;
-  height:60px;
+  height: 60px;
   margin-top: 10px;
   animation: rotate1 5s infinite linear;
   z-index: 1;
 }
 
-$triangle-size: 30px;
-
-#slice-container:hover{
+//Vid hover förstoras tårtbitarna och hela containern
+#slice-container:hover {
   animation-play-state: paused;
   width: 80px;
-  height:80px;
-  #yellow, #pink, #blue, #red {
+  height: 80px;
+
+  #yellow,
+  #pink,
+  #blue,
+  #red {
     border-width: 40px;
-  } 
+  }
 }
 
+//Roterande animation till behållaren för tårtbitarna/färgvalen
 @keyframes rotate1 {
-  0% { transform: translate(-50%) rotate(0deg); }
-  100% { transform: translate(-50%) rotate(360deg); }
-}
-/*
-@keyframes rotate2 {
-  0% { transform: translate(-50%, 0%) rotate(90deg); }
-  100% { transform: translate(-50%, 0%) rotate(450deg); }
-}
+  0% {
+    transform: translate(-50%) rotate(0deg);
+  }
 
-@keyframes rotate3 {
-  0% { transform: translate(-50%, 0%) rotate(180deg); }
-  100% { transform: translate(-50%, 0%) rotate(540deg); }
+  100% {
+    transform: translate(-50%) rotate(360deg);
+  }
 }
 
-@keyframes rotate4 {
-  0% { transform: translate(-50%, 0%) rotate(270deg); }
-  100% { transform: translate(-50%, 0%) rotate(630deg); }
-}*/
-
-
-
-#yellow, #chooseyellow {
-  @include triangle();
-  border-top: $triangle-size solid #d4d77f;
+//Utseende av tårtbitarna och tårtbitar till färgval
+#yellow,
+#chooseyellow {
+  @include mixins.triangle();
+  border-top: variables.$triangle-size solid #d4d77f;
   transform: rotate(315deg);
-  /*animation: rotate1 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
-
 }
 
-#pink, #choosepink {
-  @include triangle();
-  border-top: $triangle-size solid #fbe2ff;
+#pink,
+#choosepink {
+  @include mixins.triangle();
+  border-top: variables.$triangle-size solid #fbe2ff;
   transform: rotate(135deg);
-  /*animation: rotate2 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
 }
 
-#blue, #chooseblue{
-  @include triangle();
-  border-top: $triangle-size solid #30325b;
+#blue,
+#chooseblue {
+  @include mixins.triangle();
+  border-top: variables.$triangle-size solid #30325b;
   transform: rotate(45deg);
-  /*animation: rotate3 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
 }
 
-#red, #choosered{
-  @include triangle();
-  border-top: $triangle-size solid #6d0000;
+#red,
+#choosered {
+  @include mixins.triangle();
+  border-top: variables.$triangle-size solid #6d0000;
   transform: rotate(225deg);
-  /*animation: rotate4 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;*/
 }
-/*
-#choose{
-  transform: translate(-50%);
-  margin-left: 50%;
-  width: 240px;
-  height:200px;
-  margin-top: -120px;
-  position: absolute;
-}*/
 
+//En egen animation för varje färgvalsknapp
 @keyframes yellow-ani {
-  0% {     margin-top: -70px;
-    margin-left: -30px; }
-  100% {   
+  0% {
+    margin-top: -70px;
+    margin-left: -30px;
+  }
+
+  100% {
     margin-top: -110px;
     margin-left: -120px;
   }
 }
 
 @keyframes blue-ani {
-  0% {     margin-top: -70px;
-    margin-right: -30px; }
-  100% {   
+  0% {
+    margin-top: -70px;
+    margin-right: -30px;
+  }
+
+  100% {
     margin-top: -110px;
     margin-right: -120px;
   }
 }
 
 @keyframes red-ani {
-  0% {     margin-top: -70px;
-    margin-left: -30px; }
-  100% {   
+  0% {
+    margin-top: -70px;
+    margin-left: -30px;
+  }
+
+  100% {
     margin-top: 10px;
     margin-left: -120px;
   }
 }
 
 @keyframes pink-ani {
-  0% {     margin-top: -70px;
-    margin-right: -30px; }
-  100% {   
+  0% {
+    margin-top: -70px;
+    margin-right: -30px;
+  }
+
+  100% {
     margin-top: 10px;
     margin-right: -120px;
   }
 }
 
-#chooseyellow{
+//Extrastyling för varje valknapp av färg
+#chooseyellow {
   animation: yellow-ani 5s;
   transform: rotate(315deg);
   left: 50%;
@@ -216,7 +268,7 @@ $triangle-size: 30px;
   display: none;
 }
 
-#choosepink{
+#choosepink {
   animation: pink-ani 5s;
   transform: rotate(135deg);
   right: 50%;
@@ -225,8 +277,8 @@ $triangle-size: 30px;
   display: none;
 }
 
-#chooseblue{
-  
+#chooseblue {
+
   animation: blue-ani 5s;
   transform: rotate(45deg);
   right: 50%;
@@ -235,7 +287,7 @@ $triangle-size: 30px;
   display: none;
 }
 
-#choosered{  
+#choosered {
   animation: red-ani 5s;
   transform: rotate(225deg);
   left: 50%;
@@ -244,19 +296,31 @@ $triangle-size: 30px;
   display: none;
 }
 
-#chooseyellow:hover, #choosepink:hover, #chooseblue:hover, #choosered:hover {
+//Vid hoover förstoras även dessa tårtbitar
+#chooseyellow:hover,
+#choosepink:hover,
+#chooseblue:hover,
+#choosered:hover {
   border-width: 40px;
-} 
+}
 
-
+//Mediaquerie för att inte logotypens animation ska förstöra mobilläget
 @media (min-width: 700px) {
-@keyframes logoRotate {
-  0% { transform: translate(-50%, 0%) rotate(0deg); }
-  100% { transform: translate(-50%, 0%) rotate(180deg); }
-}
 
-.drop:hover {
-  animation: logoRotate 3s;
-  animation-fill-mode: forwards;  
-}
+  //animation som vänder upp och ned på logotypen
+  @keyframes logoRotate {
+    0% {
+      transform: translate(-50%, 0%) rotate(0deg);
+    }
+
+    100% {
+      transform: translate(-50%, 0%) rotate(180deg);
+    }
+  }
+
+  //hoover som startar logan animation
+  .drop:hover {
+    animation: logoRotate 3s;
+    animation-fill-mode: forwards;
+  }
 }

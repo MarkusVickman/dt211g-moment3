@@ -1,3 +1,6 @@
+@use "../abstracts/colors";
+@use "../abstracts/variables";
+
 //mixin för mörkttema till webbplatsen
 @mixin dark() {
     background-color: black;
@@ -12,3 +15,31 @@
     border-color: black;
 }
 
+//Generell styling av knappar
+@mixin button {
+    position: absolute;
+    background-color: colors.$button;
+    border-radius: 5px;
+    border-style: none;
+    align-items: center;
+    padding: 8px 15px;
+    border-width: 0;
+    border-radius: 5px;
+    color: colors.$bars;
+    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
+
+    &:hover {
+        background-color: colors.$hover;
+    }
+}
+
+//Mixin för trianglarna till färgvalsknappen
+@mixin triangle() {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    border-right: variables.$triangle-size solid transparent;
+    border-bottom: variables.$triangle-size solid transparent;
+    border-left: variables.$triangle-size solid transparent;
+    position: absolute;
+  }

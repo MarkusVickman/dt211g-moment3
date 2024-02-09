@@ -1,28 +1,14 @@
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 
-//Generell styling av knappar
-button {
-    position: absolute;
-    background-color: colors.$button;
-    border-radius: 5px;
-    border-style: none;
-    align-items: center;
-    padding: 8px 15px;
-    border-width: 0;
-    border-radius: 5px;
-    color: colors.$bars;
-    box-shadow: 2px 2px 2px 2px hsla(0, 0%, 0%, 0.2);
-}
 
-button:hover {
-    background-color: colors.$hover;
-}
 
 /*Specifik styling Menyknapp för öppnaknappen i headern*/
 #btn-open {
     display: flex;
     right: 25px;
     top: 27px;
+        @include mixins.button();
 }
 
 .meny-text{
@@ -36,6 +22,7 @@ button:hover {
     margin-top: 20px;
     transform: translate(-50%);
     width: 180px;
+    @include mixins.button();
 }
 
 

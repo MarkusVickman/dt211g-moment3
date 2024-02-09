@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
-        <!--Länk till javascript för scrollanimation-->
-        <script type="module" src="js/scroll_event.js"></script>
-                <!--Länk till javascript för att ändra färgschema-->
-                <script type="module" src="js/choosecolor.js"></script>
+    <!--Länk till javascript för scrollanimation-->
+    <script type="module" src="js/scroll_event.js"></script>
+    <!--Länk till javascript för att ändra färgschema-->
+    <script type="module" src="js/choosecolor.js"></script>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -24,7 +24,7 @@
 
 <body>
     <!--Header med logotyp och knapp för att öppna mobilmeny-->
-    <header id="header">
+    <header>
         <!--Logotypen ändras vid temabyte och laddas in i sass partial _theme-->
         <a href="index.html">
             <div class="logo drop"></div>
@@ -58,44 +58,56 @@
             </ul>
         </div>
     </nav>
+    <!--Pil för skrollanimation-->
     <img src="img/arrow.svg" width="150" height="250" id="arrow">
-
-
     <main>
-        <div id="select-color">
-            <h3>Byt färgtema</h3>
-            <div id="slice-container">
-                <div id="yellow"></div>
-                <div id="red"></div>
-                <div id="blue"></div>
-                <div id="pink"></div>
-            </div>
-            <div id="choose">
-                <div id="chooseyellow"></div>
-                <div id="choosered"></div>
-                <div id="chooseblue"></div>
-                <div id="choosepink"></div>
-            </div>
-        </div>
-        <p>Välj färgschema ovan eller skapa ett eget genom att mata in bakgrundsfärg och textfärg. Färgnamn eller hexkod godtas.</p>   
-        <input placeholder="Bakgrundfärg" id="bgcolor">
-        <input placeholder="Textfärg" id="color">
-        <button id="typedcolor"></button>
         <div class="text">
-
+            <!--Animation för färgvalsknappen-->
+            <div id="select-color">
+                <h3>Byt färgtema</h3>
+                <div id="slice-container">
+                    <div id="yellow"></div>
+                    <div id="red"></div>
+                    <div id="blue"></div>
+                    <div id="pink"></div>
+                </div>
+                <!--Animation för färgvalsknappens val-->
+                <div id="choose">
+                    <div id="chooseyellow"></div>
+                    <div id="choosered"></div>
+                    <div id="chooseblue"></div>
+                    <div id="choosepink"></div>
+                </div>
+            </div>
+            <!--Inputfält för att välja en egen färg-->
+            <div id="inputcolor">
+                <p>Välj färgschema ovan genom att klicka på animationen och sedan välja den "tårtbit" som passar dig.
+                    Eller skapa ett eget genom att mata in bakgrundsfärg och textfärg. Färgnamn eller hexkod godtas.</p>
+                <input placeholder="Bakgrundfärg" id="bgcolor"><br>
+                <input placeholder="Textfärg" id="color"><br>
+                <button id="newcolor">Byt färg</button>
+            </div>
+            <!--Uppgiftsbeskrivning-->
             <h1 class="titleAnimation">Animering</h1>
-            <p>Den här sidan är min lösning på moment 4 i kursen DT211G Frontend-baserad webbutveckling.            </p>
+            <p>Den här sidan är min lösning på moment 4 i kursen DT211G Frontend-baserad webbutveckling. Jag byggde
+                en enkel färgvalsfuntion i javascript för att Mattias önskade fler färger. Det tillför inte så mycket
+                färg
+                mer än en bakgrundsfärg och textfärg. Men jag fick iallafall testa en lite roligare animeringar av
+                färgvalsknappen.
+            </p>
             <h2>Lösningar</h2>
             <ul>
                 <li>Animering av länkar som inte används.</li>
                 <li>Vid hover roterar logotypen.</li>
                 <li>Huvudrubriken glider fram och tillbaka.</li>
                 <li>Vid scroll visas en pilanimation.</li>
-                <li>If/Else används för att kontrollera knappfärger och ändra till rätt färg.</li>
-                <li>Nio partials har används för SASS-koden och de är placerade i olika mappar utifrån kategori.</li>
+                <li>En animation används för att rotara flera tårtbitar i cirkeln.</li>
+                <li>Vid klick på cirkelanimationen startar 4 nya animationer som ger tillgång till flera färgval.</li>
+                <li>Det går att skriva in ett egen färgval om så önskas.</li>
+                <li>Bilderna och deras div zoomas in vid hoover.</li>
             </ul>
         </div>
-
+        <!--Lite bilder för att illustrera animation-->
         <div class="picture-container">
             <h2>Bilder</h2>
             <p>Bilder av mina funktionella men mindre snygga lösningar på problem.</p>
@@ -103,18 +115,18 @@
             <p>För att optimera luftflöde byggdes ett eget chassi av trä, plexiglas och plåt.</p>
             <picture>
                 <source srcset="img/computer.jpeg?as=webp&width=800" type="image/webp">
-                <img src="img/computer.jpeg?width=800" width="800" alt="Kaffemaskin och kaffekvarn." class="pictures">
+                <img src="img/computer.jpeg?width=800" width="400" alt="Kaffemaskin och kaffekvarn." class="pictures">
             </picture>
             <h3>Datorskärm</h3>
             <p>För att ha en extra datorskärm anpassades en laptopskärm med hjälp av en nytt styrkort.</p>
             <picture>
                 <source srcset="img/screen.jpeg?as=webp&width=800" type="image/webp">
-                <img src="img/screen.jpeg?width=800" width="800" alt="Enkel och dubbelbottnade espressofilter."
+                <img src="img/screen.jpeg?width=800" width="400" alt="Enkel och dubbelbottnade espressofilter."
                     class="pictures">
             </picture>
         </div>
     </main>
-    <footer id="footer">
+    <footer>
         <a href="sass.html" class="menu-link">Arbetsprocessen</a>
     </footer>
 </body>
