@@ -23,7 +23,8 @@
   }
 
 .titleAnimation {
-  animation: title 20s;
+  margin-top: 100px;
+  animation: title 120s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -70,6 +71,184 @@
   100% {width: 1200px;}
 }
 
+@mixin triangle() {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  border-right: $triangle-size solid transparent;
+  border-bottom: $triangle-size solid transparent;
+  border-left: $triangle-size solid transparent;
+  position: absolute;
+
+}
+
+#slice-container{
+  transform: translate(-50%);
+  margin-left: 50%;
+  width: 60px;
+  height:60px;
+  margin-top: 10px;
+  animation: rotate1 5s infinite linear;
+  z-index: 1;
+}
+
+$triangle-size: 30px;
+
+#slice-container:hover{
+  animation-play-state: paused;
+  width: 80px;
+  height:80px;
+  #yellow, #pink, #blue, #red {
+    border-width: 40px;
+  } 
+}
+
+@keyframes rotate1 {
+  0% { transform: translate(-50%) rotate(0deg); }
+  100% { transform: translate(-50%) rotate(360deg); }
+}
+/*
+@keyframes rotate2 {
+  0% { transform: translate(-50%, 0%) rotate(90deg); }
+  100% { transform: translate(-50%, 0%) rotate(450deg); }
+}
+
+@keyframes rotate3 {
+  0% { transform: translate(-50%, 0%) rotate(180deg); }
+  100% { transform: translate(-50%, 0%) rotate(540deg); }
+}
+
+@keyframes rotate4 {
+  0% { transform: translate(-50%, 0%) rotate(270deg); }
+  100% { transform: translate(-50%, 0%) rotate(630deg); }
+}*/
+
+
+
+#yellow, #chooseyellow {
+  @include triangle();
+  border-top: $triangle-size solid #d4d77f;
+  transform: rotate(315deg);
+  /*animation: rotate1 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+
+}
+
+#pink, #choosepink {
+  @include triangle();
+  border-top: $triangle-size solid #fbe2ff;
+  transform: rotate(135deg);
+  /*animation: rotate2 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}
+
+#blue, #chooseblue{
+  @include triangle();
+  border-top: $triangle-size solid #30325b;
+  transform: rotate(45deg);
+  /*animation: rotate3 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}
+
+#red, #choosered{
+  @include triangle();
+  border-top: $triangle-size solid #6d0000;
+  transform: rotate(225deg);
+  /*animation: rotate4 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;*/
+}
+/*
+#choose{
+  transform: translate(-50%);
+  margin-left: 50%;
+  width: 240px;
+  height:200px;
+  margin-top: -120px;
+  position: absolute;
+}*/
+
+@keyframes yellow-ani {
+  0% {     margin-top: -70px;
+    margin-left: -30px; }
+  100% {   
+    margin-top: -110px;
+    margin-left: -120px;
+  }
+}
+
+@keyframes blue-ani {
+  0% {     margin-top: -70px;
+    margin-right: -30px; }
+  100% {   
+    margin-top: -110px;
+    margin-right: -120px;
+  }
+}
+
+@keyframes red-ani {
+  0% {     margin-top: -70px;
+    margin-left: -30px; }
+  100% {   
+    margin-top: 10px;
+    margin-left: -120px;
+  }
+}
+
+@keyframes pink-ani {
+  0% {     margin-top: -70px;
+    margin-right: -30px; }
+  100% {   
+    margin-top: 10px;
+    margin-right: -120px;
+  }
+}
+
+#chooseyellow{
+  animation: yellow-ani 5s;
+  transform: rotate(315deg);
+  left: 50%;
+  margin-top: -110px;
+  margin-left: -120px;
+  display: none;
+}
+
+#choosepink{
+  animation: pink-ani 5s;
+  transform: rotate(135deg);
+  right: 50%;
+  margin-top: 10px;
+  margin-right: -120px;
+  display: none;
+}
+
+#chooseblue{
+  
+  animation: blue-ani 5s;
+  transform: rotate(45deg);
+  right: 50%;
+  margin-top: -110px;
+  margin-right: -120px;
+  display: none;
+}
+
+#choosered{  
+  animation: red-ani 5s;
+  transform: rotate(225deg);
+  left: 50%;
+  margin-top: 10px;
+  margin-left: -120px;
+  display: none;
+}
+
+#chooseyellow:hover, #choosepink:hover, #chooseblue:hover, #choosered:hover {
+  border-width: 40px;
+} 
+
+
 @media (min-width: 700px) {
 @keyframes logoRotate {
   0% { transform: translate(-50%, 0%) rotate(0deg); }
@@ -81,4 +260,3 @@
   animation-fill-mode: forwards;  
 }
 }
-
