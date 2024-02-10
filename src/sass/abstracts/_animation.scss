@@ -92,11 +92,31 @@
 #arrow {
   position: fixed;
   margin-left: 20px;
-  margin-top: 30%;
-  animation: scroll 5s;
+  margin-top: 20%;
+  animation: scroll 3s;
   animation-timing-function: linear;
   animation-iteration-count: 2;
   display: none;
+}
+
+//Scrollbar som visar posionon av scrollning
+#scrollbar {
+  position: fixed;
+  right: 20px;
+  top: 40%;
+  overflow: hidden;
+  height: 400px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: darkblue;
+}
+
+//Scrollbarens rutor
+#scrollbar1, #scrollbar2, #scrollbar3, #scrollbar4, #scrollbar5{
+  background-color: transparent;
+  position: relative;
+  width: 20px;
+  height: 80px;
 }
 
 //Animationen som tillhör arrow som gör att den rör sig upp och ner vid skroll

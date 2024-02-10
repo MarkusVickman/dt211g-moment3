@@ -24,7 +24,7 @@
 
 <body>
     <!--Header med logotyp och knapp för att öppna mobilmeny-->
-    <header>
+    <header id="scrollcount">
         <!--Logotypen ändras vid temabyte och laddas in i sass partial _theme-->
         <a href="index.html">
             <div class="logo drop"></div>
@@ -60,6 +60,14 @@
     </nav>
     <!--Pil för skrollanimation-->
     <img src="img/arrow.svg" width="20" height="50" id="arrow" alt="Pil som indikerar att det sidan skrollas">
+    <!--Scrollbar som indikerar hur lång man har scrollat-->
+    <div id="scrollbar">
+        <div id="scrollbar1"></div>
+        <div id="scrollbar2"></div>
+        <div id="scrollbar3"></div>
+        <div id="scrollbar4"></div>
+        <div id="scrollbar5"></div>
+    </div>
     <main>
         <div class="text">
             <!--Animation för färgvalsknappen-->
@@ -94,6 +102,7 @@
                 färg
                 mer än en bakgrundsfärg och textfärg. Men jag fick iallafall testa en lite roligare animeringar av
                 färgvalsknappen.
+                Funktionen för skrollningsindikering är lite buggig och isåfall får man ladda om sidan. Det är tyvärr inte en CSS-animering på den.
             </p>
             <h2>Lösningar</h2>
             <ul>
@@ -105,6 +114,7 @@
                 <li>Vid klick på cirkelanimationen startar 4 nya animationer som ger tillgång till flera färgval.</li>
                 <li>Det går att skriva in ett egen färgval om så önskas.</li>
                 <li>Bilderna och deras div zoomas in vid hoover.</li>
+                <li>Gjorde en funktion i JS som räknar ut posion och visar hur lång det är skrollat</li>
             </ul>
         </div>
         <!--Lite bilder för att illustrera animation-->
