@@ -91,28 +91,36 @@
 //Position av en pil som ska visas vid scorr med hjälp av javascript
 #arrow {
   position: fixed;
-  margin-left: 20px;
-  margin-top: 20%;
   animation: scroll 3s;
   animation-timing-function: linear;
   animation-iteration-count: 2;
   display: none;
+  right: 45px;
+  margin-top: -20px;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
 //Scrollbar som visar posionon av scrollning
 #scrollbar {
   position: fixed;
   right: 20px;
-  top: 40%;
+  top: 50%;
+  transform: translate(0%, -50%);
   overflow: hidden;
   height: 400px;
   width: 20px;
   border-radius: 10px;
   background-color: darkblue;
+  display: none;
 }
 
 //Scrollbarens rutor
-#scrollbar1, #scrollbar2, #scrollbar3, #scrollbar4, #scrollbar5{
+#scrollbar1,
+#scrollbar2,
+#scrollbar3,
+#scrollbar4,
+#scrollbar5 {
   background-color: transparent;
   position: relative;
   width: 20px;
@@ -121,12 +129,13 @@
 
 //Animationen som tillhör arrow som gör att den rör sig upp och ner vid skroll
 @keyframes scroll {
-  0% {
+
+  /*0% {
     display: none;
   }
-
+*/
   0% {
-    transform: translate(-50%, 0%);
+    transform: translate(0%, -100%);
   }
 
   1% {
@@ -134,16 +143,17 @@
   }
 
   50% {
-    transform: translate(-50%, 100%);
+    transform: translate(0%, 100%);
   }
 
   100% {
-    transform: translate(-50%, 0%);
+    transform: translate(0%, -100%);
   }
 
+  /*
   100% {
     display: none;
-  }
+  }*/
 }
 
 //Vid hoover över bilder ska en zoomande animation starta
@@ -351,21 +361,26 @@
     0% {
       transform: translate(-0%, 0%);
     }
-  
+
     25% {
       transform: translate(-90%, 0%);
     }
-  
+
     50% {
       transform: translate(0%, 0%);
     }
-  
+
     75% {
       transform: translate(80%, 0%);
     }
-  
+
     100% {
       transform: translate(0%, 0%);
     }
+  }
+
+  //Scrollbar som visar posionon av scrollning
+  #scrollbar {
+    display: block;
   }
 }
