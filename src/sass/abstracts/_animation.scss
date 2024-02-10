@@ -90,9 +90,8 @@
 
 //Position av en pil som ska visas vid scorr med hjälp av javascript
 #arrow {
-  position: absolute;
-  transform: translate(-50%);
-  margin-left: 50%;
+  position: fixed;
+  margin-left: 20px;
   margin-top: 30%;
   animation: scroll 5s;
   animation-timing-function: linear;
