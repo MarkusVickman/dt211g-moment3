@@ -1,5 +1,5 @@
 /*JavaScript som hämtar data med hjälp av FetchAPI och async/await och skriver ut detta till chart.js.
-Datan går att sortera efter kurskod, namn och progression. Det går även att filtrera igenom datan.*/
+Från datan skrivs information ut i form att mest sökta kurser och utbildningar.*/
 
 "use strict"
 
@@ -19,7 +19,7 @@ async function fetchData() {
     }
 }
 
-/*Funktion som bygger en tabell av den datan som följer med som argument.*/
+/*För att hitta i datan gjorde jag 2 nya arrayer som tar emot den filtrerade datan utifrån om typen är kurs eller program.*/
 function chart(data) {
     let courseData = data.filter((course) => {
         return course.type.toLowerCase().includes("kurs");
@@ -28,56 +28,60 @@ function chart(data) {
         return program.type.toLowerCase().includes("program");
     });
 
+    /*Datan sorteras från största antal sökande till lägsta*/
     courseData.sort((a, b) => (b.applicantsTotal - a.applicantsTotal));
     programData.sort((a, b) => (b.applicantsTotal - a.applicantsTotal));
-    
+
+    //2 nya arrayer som är de arrayer som blir diagram
     let coureMostApplicants = [];
     let programMostApplicants = [];
 
-    for (let i = 0; i < 6; i++ ){
+    /*För att lista de 6 första så loopar jag igenom de 6 första värderna i arrayen med kurser och pushar dessa till de nyskapade arrayerna */
+    for (let i = 0; i < 6; i++) {
         coureMostApplicants.push(courseData[i]);
     }
 
-    for (let i = 0; i < 5; i++ ){
+    /*För att lista de 5 första så loopar jag igenom de 5 första värderna i arrayen med program och pushar dessa till de nyskapade arrayerna */
+    for (let i = 0; i < 5; i++) {
         programMostApplicants.push(programData[i]);
     }
-    //let highest = courseData;
 
     buildChart(coureMostApplicants, programMostApplicants);
 }
 
-function buildChart(course, program){
+/*funktion som bygger diagram med hjälp av chart.js*/
+function buildChart(course, program) {
 
- new Chart(
-    document.getElementById('barChart'),
-    {
-      type: 'bar',
-      data: {
-        labels: course.map(row => row.name),
-        datasets: [
-          {
-            label: 'Antal sökande per kurs',
-            data: course.map(row => row.applicantsTotal)
-          }
-        ]
-      }
-    }
-  );
-  new Chart(
-    document.getElementById('circleChart'),
-    {
-      type: 'pie',
-      data: {
-        labels: program.map(row => row.name),
-        datasets: [
-          {
-            label: 'Antal sökande per kurs',
-            data: program.map(row => row.applicantsTotal)
-          }
-        ]
-      }
-    }
-  );
+    new Chart(
+        document.getElementById('barChart'),
+        {
+            type: 'bar',
+            data: {
+                labels: course.map(row => row.name),
+                datasets: [
+                    {
+                        label: 'Antal sökande per kurs',
+                        data: course.map(row => row.applicantsTotal)
+                    }
+                ]
+            }
+        }
+    );
+    new Chart(
+        document.getElementById('circleChart'),
+        {
+            type: 'pie',
+            data: {
+                labels: program.map(row => row.name),
+                datasets: [
+                    {
+                        label: 'Antal sökande per kurs',
+                        data: program.map(row => row.applicantsTotal)
+                    }
+                ]
+            }
+        }
+    );
 }
 
 
