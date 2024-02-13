@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
+    <!--Länk till javascript chart data-->
+    <script type="module" src="js/admission_chart.js"></script>
+    <!--Länk till Chart.js via CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -57,27 +61,33 @@
     <main>
         <!--Header med logotyp och knapp för att öppna mobilmeny-->
         <div class="text">
-            <h1>Sass</h1>
-            <p>Jag upplevde att det var ett ganska stort uppdrag att lära sig SASS för att utföra den här uppgiften.
-                Enligt mig tillför SASS mycket komplicitet men istället gör koden mer modulär och lättare att
-                underhålla.
-                Det var svårt att implementera if/else-satser till något användbart.
-                Det är inte så lätt att uppleva fördelarna i ett sån här relativt liten uppgift. Men jag ser fördelar
-                med mixins
-                och även variabler. Det var också kul att se hur enkelt det var att anpassa sidan efter dark och
-                lightmode
-                med hjälp av media query och mixins.
+            <h1>Diagram</h1>
+            <div>
+                <canvas id="barChart"></canvas>
+            </div>
+            
+            <div>
+                <canvas id="circleChart"></canvas>
+            </div>
+
+            <h2>Uppgiften</h2>
+            <p> Du ska i denna uppgift skapa två olika typer av diagram, ett stapeldiagram och ett cirkeldiagram.
+
+                Dessa diagram ska finnas tillgängliga att se under HTML-sidan "Diagram".
+
+                Det finns olika JavaScript-bibliotek för att infoga funktionalitetet för diagram i ditt projekt.
+                Exempelvis: Chart.js, Chartist.js eller D3.js </p>
+            <p>
+                Den data som ska presenteras visuellt i diagramen ska hämtas in från extern källa med FetchAPI-anrop
+                tillsammans med async/await.
             </p>
-            <h2>Lösningar</h2>
-            <ul>
-                <li>Variabler används för att lagra färgerna som används på webbplatsen.</li>
-                <li>Color functions används till knapparnas färg och till lightmode i mixins-filen.</li>
-                <li>Nesting används lite i koden för menyn och typografi.</li>
-                <li>Mixins innehåller utseendet för darkmode och lightmode. Färgläge bestäms utifrån användaren
-                    inställningar med hjälp av media query.</li>
-                <li>If/Else används för att kontrollera knappfärger och ändra till rätt färg.</li>
-                <li>Nio partials har används för SASS-koden och de är placerade i olika mappar utifrån kategori.</li>
-            </ul>
+            <p>Krav på uppgiften:
+
+                Stabeldiagram - ska visa statistik över de 6 mest sökta kurserna på Mittuniverstetet, HT23. Namn på kurs
+                och totalt antal sökande ska framgå i diagrammet.
+                Cirkeldiagram - ska visa statistik över de 5 mest sökta programmen på Mittuniverstetet, HT23. Namn på
+                program och totalt antal sökande ska framgå i diagrammet.
+            </p>
         </div>
     </main>
     <footer>
