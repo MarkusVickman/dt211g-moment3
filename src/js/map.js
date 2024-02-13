@@ -1,6 +1,4 @@
 /*hämtar sökord från inputfält och visar bästa resultat som en markör på en openstreetkarta. Koordinater hämtas med fetch api av söktjänsten nominatim och openstreetmap*/
-
-
 //https://nominatim.openstreetmap.org/search?addressdetails=1&q=mittuniversitetet&format=jsonv2&limit=1
 
 let searchBtn = document.getElementById("searchbtn");
@@ -11,7 +9,7 @@ searchBtn.addEventListener("click", function (e) {
     fetchData(search);
 })
 
-// En asynkron funktion som väntar på datan som hämtas som array av object med fetch api.
+/* En asynkron funktion som väntar på datan som hämtas som array av object med fetch api. Hämtar data med hjälp av nominatim sökfunktion och använder sökordet från sidan*/
 async function fetchData(search) {
     try {
         const response = await fetch('https://nominatim.openstreetmap.org/search?addressdetails=1&q=' + search + '&format=jsonv2&limit=1');
@@ -23,6 +21,7 @@ async function fetchData(search) {
     }
 }
 
+/*Tar datan och extraherar värden för kordinater för både latitude, longitude och boundingboxex. Skriver ut adressen till iframen för kartan.*/
 function writeToMap(coordinates) {
     let lat = coordinates[0].lat;
     let lon = coordinates[0].lon;
