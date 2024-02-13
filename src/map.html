@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="sass/main.scss">
     <!--Länk till javascript mobilmeny-->
     <script type="module" src="js/mobile_menu.js"></script>
+    <!--Länk till karttjänst gjord i js-->
+    <script type="module" src="js/map.js"></script>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon.ico?ver=2.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -59,7 +61,7 @@
         <div class="text">
             <h1>Karta</h1>
             <h3>Vilken plats vill du se?</h3>
-            <input id="search"><button id="searchbtn">Sök</button>
+            <input id="searchinput"><button id="searchbtn">Sök</button>
             <iframe width="425" height="350" id="outputmap"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=17.22664833068848%2C62.37881073359523%2C17.33951568603516%2C62.40738847805932&amp;layer=mapnik&amp;marker=62.39310301297409%2C17.283082008361816"
                 style="border: 1px solid black"></iframe><br /><small><a
