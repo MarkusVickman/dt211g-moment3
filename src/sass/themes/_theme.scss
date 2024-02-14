@@ -7,7 +7,8 @@
     header,
     nav,
     footer,
-    .menu-link {
+    .menu-link,
+    .footer-link {
         @include mixins.light();
     }
     
@@ -24,7 +25,8 @@
     header,
     nav,
     footer,
-    .menu-link {
+    .menu-link,
+    .footer-link {
         @include mixins.dark();
     }
 

@@ -8,6 +8,11 @@
     display: block;
 }
 
+.footer-link {
+    @extend .menu-link;
+    display: inline-block;
+}
+
 .menu-link:hover {
     background-color: colors.$hover;
 }
