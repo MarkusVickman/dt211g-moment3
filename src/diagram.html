@@ -62,27 +62,25 @@
         <!--Header med logotyp och knapp för att öppna mobilmeny-->
         <div class="text">
             <h1>Diagram</h1>
-            <div width="90%">
+            <div>
+                <h3>Mest sökta kurserna hos Mittuniverstetet HT2023</h3>
                 <canvas id="barChart"></canvas>
             </div>
-            
+
             <div>
+                <h3>Mest sökta programmen hos Mittuniverstetet HT2023</h3>
                 <canvas id="circleChart"></canvas>
             </div>
 
             <h2>Uppgiften</h2>
-            <p> Du ska i denna uppgift skapa två olika typer av diagram, ett stapeldiagram och ett cirkeldiagram.
-
-                Dessa diagram ska finnas tillgängliga att se under HTML-sidan "Diagram".
-
-                Det finns olika JavaScript-bibliotek för att infoga funktionalitetet för diagram i ditt projekt.
-                Exempelvis: Chart.js, Chartist.js eller D3.js </p>
+            <p> I denna uppgift har jag skapat två olika typer av diagram, ett stapeldiagram och ett cirkeldiagram. För
+                att skapa diagrammen har jag använt JavaScript-biblioteket Chart.js, där Chart.js fick göra det tunga
+                jobbet åt mig.</p>
             <p>
-                Den data som ska presenteras visuellt i diagramen ska hämtas in från extern källa med FetchAPI-anrop
+                Den data som jag presenterat visuellt i diagramen har hämtats in från en extern källa med FetchAPI-anrop
                 tillsammans med async/await.
             </p>
             <p>Krav på uppgiften:
-
                 Stabeldiagram - ska visa statistik över de 6 mest sökta kurserna på Mittuniverstetet, HT23. Namn på kurs
                 och totalt antal sökande ska framgå i diagrammet.
                 Cirkeldiagram - ska visa statistik över de 5 mest sökta programmen på Mittuniverstetet, HT23. Namn på

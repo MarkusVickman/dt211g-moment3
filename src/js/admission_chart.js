@@ -77,7 +77,7 @@ function buildChart(course, program) {
                 labels: program.map(row => row.name),
                 datasets: [
                     {
-                        label: 'Antal sökande per kurs',
+                        label: 'Antal sökande per program',
                         data: program.map(row => row.applicantsTotal)
                     }
                 ]
