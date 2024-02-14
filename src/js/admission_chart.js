@@ -66,6 +66,21 @@ function buildChart(course, program) {
                         data: course.map(row => row.applicantsTotal)
                     }
                 ]
+            },
+            options: {
+                scales: {
+                    x: {
+                        ticks: {
+                            // Maximum rotation angle for tick labels
+                            maxRotation: 45,
+                            // Minimum rotation angle for tick labels
+                            minRotation: 45
+                        }
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
             }
         }
     );
