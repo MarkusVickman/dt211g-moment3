@@ -37,7 +37,7 @@ function chart(data) {
     let programMostApplicants = [];
 
     /*För att lista de 6 första så loopar jag igenom de 6 första värderna i arrayen med kurser och pushar dessa till de nyskapade arrayerna */
-    for (let i = 0; i < 6; i++) {
+    for (let i = 5; i >= 0; i--) {
         coureMostApplicants.push(courseData[i]);
     }
 
