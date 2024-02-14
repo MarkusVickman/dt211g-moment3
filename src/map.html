@@ -49,7 +49,7 @@
         <div class="center-menu">
             <ul>
                 <li><a href="index.html" class="menu-link">Startsida</a></li>
-                <li><a href="sass.html" class="menu-link" id="menu-underline">SASS</a></li>
+                <li><a href="sass.html" class="menu-link">SASS</a></li>
                 <li><a href="animation.html" class="menu-link">Animering</a></li>
                 <li><a href="diagram.html" class="menu-link">Diagram</a></li>
                 <li><a href="map.html" class="menu-link" id="menu-underline">Karta</a></li>
@@ -60,28 +60,36 @@
         <!--Header med logotyp och knapp för att öppna mobilmeny-->
         <div class="text">
             <h1>Karta</h1>
-            <h3>Vilken plats vill du se?</h3>
-            <input id="searchinput"><button id="searchbtn">Sök</button>
-            <iframe width="425" height="350" id="outputmap"
+            <!--Knapp och inputfälf för att söka efter platser hos nominatim och openstreetmap-->
+            <div id="input-button">
+                <h3>Vilken plats vill du se?</h3>
+                <input id="searchinput"><br>
+                <button id="searchbtn">Sök</button>
+            </div>
+            <!--Iframe för openstreetmap-->
+            <iframe id="outputmap"
                 src="https://www.openstreetmap.org/export/embed.html?bbox=17.22664833068848%2C62.37881073359523%2C17.33951568603516%2C62.40738847805932&amp;layer=mapnik&amp;marker=62.39310301297409%2C17.283082008361816"
-                style="border: 1px solid black"></iframe><br /><small><a
+                style="border: 1px solid black"></iframe><br><small><a
                     href="https://www.openstreetmap.org/?mlat=62.3931&amp;mlon=17.2831#map=15/62.3931/17.2831">View
                     Larger Map</a></small>
-
             <h2>Lösningar</h2>
+            <p>
+                I denna uppgift har jag användt ett externt API för att bifoga en karta på webbplatsen. Lösningen jag
+                valde var att kombinera Nominatim API för att få fram kordinater(latitude och longitude) med
+                OpenStreetMap som eninbäddad iframe.
+            </p>
+            <h3>Krav på uppgiften:</h3>
             <ul>
-                <li>Variabler används för att lagra färgerna som används på webbplatsen.</li>
-                <li>Color functions används till knapparnas färg och till lightmode i mixins-filen.</li>
-                <li>Nesting används lite i koden för menyn och typografi.</li>
-                <li>Mixins innehåller utseendet för darkmode och lightmode. Färgläge bestäms utifrån användaren
-                    inställningar med hjälp av media query.</li>
-                <li>If/Else används för att kontrollera knappfärger och ändra till rätt färg.</li>
-                <li>Nio partials har används för SASS-koden och de är placerade i olika mappar utifrån kategori.</li>
+                <li>Det ska finnas ett textfält någonstans på sidan där användaren kan skriva in en plats.</li>
+                <li>Vid val av plats ska FetchAPI-anrop göras tillsammans med async/await.</li>
+                <li>Platsen ska visuellt visas på kartan med markör för vald plats.</li>
             </ul>
+            <p>För att skapa en liknande lösning hittar du länkar till documentation och introduktion i den här sidans footer.</p>
         </div>
     </main>
     <footer>
-        <a href="sass.html" class="menu-link">Arbetsprocessen</a>
+        <a href="https://wiki.openstreetmap.org/wiki/Export#Embeddable_HTML" class="menu-link">OpenStreetMap</a>
+        <a href="https://nominatim.org/release-docs/latest/" class="menu-link">Nominatim</a>
     </footer>
 </body>
 

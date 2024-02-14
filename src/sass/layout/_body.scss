@@ -35,7 +35,8 @@ main {
     
 }
 
-#inputcolor {
+/*Styling för input och knappar när de är intill varandra typ byta färg och till kartan*/
+#input-button {
     text-align: center;
     input{
         margin-bottom: 10px;
@@ -46,4 +47,5 @@ main {
         width: 100px;
         margin-left: -50px;
     }
+    margin-bottom: 50px;
 }
