@@ -51,8 +51,10 @@ function chart(data) {
 
 /*funktion som bygger diagram med hjälp av chart.js*/
 function buildChart(course, program) {
-
+    Chart.defaults.font.size = 16;
+    Chart.defaults.font.weight = 600;
     new Chart(
+
         document.getElementById('barChart'),
         {
             type: 'bar',
