@@ -53,6 +53,14 @@ function chart(data) {
 function buildChart(course, program) {
     Chart.defaults.font.size = 16;
     Chart.defaults.font.weight = 600;
+
+    /*döljer legends/labels för x axeln i mobilläget för responsivitet, men labels visas ändå vid klick*/
+
+    let noShow = false;
+    if (window.innerWidth > 700) {
+    noShow = true;
+    }
+
     new Chart(
 
         document.getElementById('barChart'),
@@ -72,9 +80,10 @@ function buildChart(course, program) {
                     x: {
                         ticks: {
                             // Maximum rotation angle for tick labels
-                            maxRotation: 45,
+                            maxRotation: 15,
                             // Minimum rotation angle for tick labels
-                            minRotation: 45
+                            minRotation: 15,
+                            display: noShow
                         }
                     },
                     y: {
