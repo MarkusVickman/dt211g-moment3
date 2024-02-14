@@ -32,7 +32,6 @@ nav {
 
 //media querie för att navigeringen ska visas annorlunda på större skärmar
 @media (min-width: 700px) {
-
     nav {
         border-top: 1px;
         border-bottom: 1px;
@@ -64,6 +63,6 @@ nav {
         margin-top: 2px;
         padding: 8px;
         border-radius: 5px;
-        display: block;
+        display: inline-block;
     }
 }
